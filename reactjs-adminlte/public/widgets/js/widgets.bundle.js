@@ -1,4 +1,4 @@
-webpackJsonp([2],[
+webpackJsonp([1],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -8,7 +8,7 @@ webpackJsonp([2],[
 	 */
 
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22),
 	        __webpack_require__(2),   
 	        __webpack_require__(3),
 	        __webpack_require__(13),
@@ -95,18 +95,21 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22),
 	        __webpack_require__(3),
 	        __webpack_require__(29),
 	        __webpack_require__(30),
 	        __webpack_require__(31),
 	        __webpack_require__(32),
-	        __webpack_require__(28),
 	        __webpack_require__(33),
+	        __webpack_require__(28),
 	        __webpack_require__(34),
 	        __webpack_require__(35),
-	        __webpack_require__(36)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts) {
+	        __webpack_require__(36),
+	        __webpack_require__(37),
+	        __webpack_require__(38),
+	        __webpack_require__(39)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderBar, NavigationMenu, InfoTile, ProgressBar, StatTile, SmallBox, ChatBox, Conversations, Contacts, ProfileCard, ProfileInfoList, ProfileInfoBlocks) {
 	        var Widgets = React.createClass({displayName: "Widgets",
 	            getInitialState: function() {
 	                return {
@@ -115,7 +118,8 @@ webpackJsonp([2],[
 	                    statTileOptions: [],
 	                    smallBoxOptions: [],
 	                    smallBoxBorderedOptions: [],
-	                    chatBoxOptions: []
+	                    chatBoxOptions: [],
+	                    ProfileCardOptions: []
 	                }
 	            },
 	            componentDidMount: function() {
@@ -273,7 +277,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -308,7 +312,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -336,7 +340,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -364,7 +368,7 @@ webpackJsonp([2],[
 	                        date: '23 Jan 2:00 pm',
 	                        message: "Is this template really for free? That's unbelievable!"
 	                    }, {
-	                        self: true,
+	                        align: 'right',
 	                        name: 'Sarah Bullock',
 	                        displayPicture: '../dist/img/user3-128x128.jpg',
 	                        date: '23 Jan 2:05 pm',    
@@ -378,7 +382,69 @@ webpackJsonp([2],[
 	                        date: '2/28/2015',
 	                        message: 'How have you been? I was...'
 	                    }]
-	                }];
+	                }],
+
+	                ProfileCardOptions = [
+	                    {
+	                        theme: 'bg-yellow',
+	                        displayName: 'Nadia Carmichael',
+	                        description: 'Lead Developer',
+	                        displayPicture: '../dist/img/user7-128x128.jpg',
+	                        pictureAlignment: 'left',
+	                        infoList: [{
+	                            description: 'Projects',
+	                            stats: 31,
+	                            link: '#',
+	                            badgeTheme: 'bg-blue'
+	                        }, {
+	                            description: 'Tasks',
+	                            stats: 5,
+	                            link: '#',
+	                            badgeTheme: 'bg-aqua'
+	                        }, {
+	                            description: 'Completed Projects',
+	                            stats: 12,
+	                            link: '#',
+	                            badgeTheme: 'bg-green'
+	                        }, {
+	                            description: 'Followers',
+	                            stats: 842,
+	                            link: '#',
+	                            badgeTheme: 'bg-red'
+	                        }]
+	                    }, {
+	                        theme: 'bg-aqua-active',
+	                        displayName: 'Alexander Pierce',
+	                        description: 'Founder & CEO',
+	                        displayPicture: '../dist/img/user1-128x128.jpg',
+	                        infoList: [{
+	                            description: 'SALES',
+	                            stats: '3,200'
+	                        }, {
+	                            description: 'FOLLOWERS',
+	                            stats: '13,000'
+	                        }, {
+	                            description: 'PRODUCTS',
+	                            stats: 35
+	                        }]
+	                    }, {
+	                        theme: 'bg-black',
+	                        displayName: 'Elizabeth Pierce',
+	                        description: 'Web Designer',
+	                        displayPicture: '../dist/img/user3-128x128.jpg',
+	                        coverPicture: '../dist/img/photo1.png',
+	                        infoList: [{
+	                            description: 'SALES',
+	                            stats: '3,200'
+	                        }, {
+	                            description: 'FOLLOWERS',
+	                            stats: '13,000'
+	                        }, {
+	                            description: 'PRODUCTS',
+	                            stats: 35
+	                        }]
+	                    }
+	                ];
 
 	                this.setState({
 	                    infoTileOptions: infoTileOptions,
@@ -386,7 +452,8 @@ webpackJsonp([2],[
 	                    statTileOptions: statTileOptions,
 	                    smallBoxOptions: smallBoxOptions,
 	                    smallBoxBorderedOptions: smallBoxBorderedOptions,
-	                    chatBoxOptions: chatBoxOptions
+	                    chatBoxOptions: chatBoxOptions,
+	                    ProfileCardOptions: ProfileCardOptions
 	                });
 	            },
 	            render: function() {
@@ -405,7 +472,7 @@ webpackJsonp([2],[
 	                var progressInfoTileWidgets = this.state.progressInfoTileOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(InfoTile, {
-	                            key: "rowOne"+iterator, 
+	                            key: "rowTwo"+iterator, 
 	                            content: "", 
 	                            icon: options.icon, 
 	                            stats: options.stats, 
@@ -444,7 +511,7 @@ webpackJsonp([2],[
 	                var smallBoxBorderedWidgets = this.state.smallBoxBorderedOptions.map(function (options, iterator) {
 	                    return (
 	                        React.createElement(SmallBox, {
-	                            key: "rowFour"+iterator, 
+	                            key: "rowFive"+iterator, 
 	                            border: options.border, 
 	                            content: options.content, 
 	                            loading: options.loading, 
@@ -468,10 +535,44 @@ webpackJsonp([2],[
 
 	                            React.createElement(Conversations, {conversations: options.conversations}), 
 	                            React.createElement(Contacts, {contacts: options.contacts})
-	                            
+
 	                        )
 
 	                    )
+	                });
+
+	                var ProfileCardWidgets = this.state.ProfileCardOptions.map(function (options, iterator) {
+	                    if(options.pictureAlignment === 'left'){
+	                        return (
+	                            React.createElement(ProfileCard, {
+	                                key: "rowSeven"+iterator, 
+	                                theme: options.theme, 
+	                                displayName: options.displayName, 
+	                                description: options.description, 
+	                                displayPicture: options.displayPicture, 
+	                                pictureAlignment: options.pictureAlignment, 
+	                                coverPicture: options.coverPicture}, 
+
+	                                React.createElement(ProfileInfoList, {list: options.infoList})
+
+	                            )
+	                        )
+	                    }else{
+	                        return (
+	                            React.createElement(ProfileCard, {
+	                                key: "rowSeven"+iterator, 
+	                                theme: options.theme, 
+	                                displayName: options.displayName, 
+	                                description: options.description, 
+	                                displayPicture: options.displayPicture, 
+	                                coverPicture: options.coverPicture}, 
+
+	                                React.createElement(ProfileInfoBlocks, {list: options.infoList})
+
+	                            )
+	                        )
+	                    }
+	                
 	                });
 
 	                return (
@@ -516,9 +617,9 @@ webpackJsonp([2],[
 	                                React.createElement("div", {className: "row"}, 
 	                                    chatBoxWidgets
 	                                ), 
-
-	                                React.createElement("div", {className: "row"}
-	                                                     
+	                                React.createElement("h2", {className: "page-header"}, "Social Widgets"), 
+	                                React.createElement("div", {className: "row"}, 
+	                                    ProfileCardWidgets
 	                                ), 
 
 	                                React.createElement("div", {className: "row"}
@@ -562,59 +663,96 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
-	        var StatTile = React.createClass({displayName: "StatTile",
+	        __webpack_require__(22),
+	        __webpack_require__(2),
+	        __webpack_require__(13)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        var SmallBox = React.createClass({displayName: "SmallBox",
 	            getDefaultProps: function() {
 	                return {
-	                    color: 'bg-yellow',
-	                    icon: 'ion-person-add',
-	                    subject: 'Default Subject',
-	                    stats: '0',
-	                    link: '/default/link'
+	                    type: 'expandable',
+	                    theme: 'box-default',
+	                    loading: false,
+	                    border: true,
+	                    title: 'Default title',
+	                    content: 'Default content',
 	                }
 	            },
-	            render: function() {
-	                var link = '',
-	                    stats = React.createElement("h3", null, " ", this.props.stats, " ");
+	            toggleCollapse: function(event) {
+	                var box = ReactDOM.findDOMNode(this).children[0],
+	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
+	                    icon = event.currentTarget.children[0];
 
-	                if(this.props.link) {
-	                    link =
-	                        React.createElement("a", {href: this.props.link, className: "small-box-footer"}, 
-	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
-	                        );
+	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
+	            },
+	            removeBox: function(event){
+	                var box = ReactDOM.findDOMNode(this).children[0];
+	                commonFunctions.removeBox(box);
+	            },
+	            render: function() {
+	                var that = this,
+	                    boxClassname, button, borderClass, loadingState;
+
+	                switch(this.props.type){
+	                    case 'expandable': 
+	                        boxClassname = "collapsed-box";
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-plus"})
+	                            );
+	                        break;
+
+	                    case 'collapsable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
+	                                React.createElement("i", {className: "fa fa-minus"})
+	                            );
+	                        break;
+
+	                    case 'removable':
+	                        boxClassname = '';
+	                        button = 
+	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "remove", onClick: that.removeBox}, 
+	                                React.createElement("i", {className: "fa fa-times"})
+	                            );
+	                        break; 
 	                }
 
-	                if(this.props.stats.indexOf('%') !== -1) {
-	                    var style = {
-	                        fontSize: '20px'
-	                    };
-
-	                    stats =
-	                        React.createElement("h3", null, 
-	                            this.props.stats.replace(/%/g, ''), 
-	                            React.createElement("sup", {style: style}, "%")
+	                if(this.props.loading === true){
+	                    loadingState = 
+	                        React.createElement("div", {className: "overlay"}, 
+	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
 	                        )
 	                }
 
+	                if(this.props.border === true){
+	                    borderClass = 'box-solid';
+	                }
+
 	                return(
-	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
-	                        React.createElement("div", {className: "small-box "+this.props.theme}, 
-	                            React.createElement("div", {className: "inner"}, 
-	                                stats, 
-	                                React.createElement("p", null, this.props.subject)
+	                    React.createElement("div", {className: "col-md-3"}, 
+	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
+	                            React.createElement("div", {className: "box-header with-border"}, 
+	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
+	                                React.createElement("div", {className: "box-tools pull-right"}, 
+	                                    button
+	                                )
+	                                /* /.box-tools */
 	                            ), 
-	                            React.createElement("div", {className: "icon"}, 
-	                                React.createElement("i", {className: "fa "+this.props.icon})
+	                            /* /.box-header */
+	                            React.createElement("div", {className: "box-body"}, 
+	                                this.props.content
 	                            ), 
-	                            link
+	                            /* /.box-body */
+	                            loadingState
 	                        )
 	                    )
 	                )
 	            }
-	        });
+	        })
 
-	        return StatTile;
+	        return SmallBox;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
@@ -622,11 +760,11 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22),
 	        __webpack_require__(3),
-	        __webpack_require__(40),
-	        __webpack_require__(41),
-	        __webpack_require__(42)
+	        __webpack_require__(43),
+	        __webpack_require__(44),
+	        __webpack_require__(45)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $, HeaderMessages, HeaderNotifications, HeaderTasks) {
 	        var HeaderBar = React.createClass({displayName: "HeaderBar",
 	            getInitialState: function () {
@@ -818,7 +956,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22),
 	        __webpack_require__(3),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, $) {
 	        var NavigationMenu = React.createClass({displayName: "NavigationMenu",
@@ -1004,7 +1142,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
+	        __webpack_require__(22)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var InfoTile = React.createClass({displayName: "InfoTile",
 	            getDefaultProps: function() {
@@ -1065,7 +1203,7 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
+	        __webpack_require__(22)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var ProgressBar = React.createClass({displayName: "ProgressBar",
 	            getDefaultProps: function() {
@@ -1104,96 +1242,59 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
-	        var SmallBox = React.createClass({displayName: "SmallBox",
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var StatTile = React.createClass({displayName: "StatTile",
 	            getDefaultProps: function() {
 	                return {
-	                    type: 'expandable',
-	                    theme: 'box-default',
-	                    loading: false,
-	                    border: true,
-	                    title: 'Default title',
-	                    content: 'Default content',
+	                    color: 'bg-yellow',
+	                    icon: 'ion-person-add',
+	                    subject: 'Default Subject',
+	                    stats: '0',
+	                    link: '/default/link'
 	                }
-	            },
-	            toggleCollapse: function(event) {
-	                var box = ReactDOM.findDOMNode(this).children[0],
-	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
-	                    icon = event.currentTarget.children[0];
-
-	                commonFunctions.toggleBoxCollapse(box, boxBody, icon);
-	            },
-	            removeBox: function(event){
-	                var box = ReactDOM.findDOMNode(this).children[0];
-	                commonFunctions.removeBox(box);
 	            },
 	            render: function() {
-	                var that = this,
-	                    boxClassname, button, borderClass, loadingState;
+	                var link = '',
+	                    stats = React.createElement("h3", null, " ", this.props.stats, " ");
 
-	                switch(this.props.type){
-	                    case 'expandable': 
-	                        boxClassname = "collapsed-box";
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
-	                                React.createElement("i", {className: "fa fa-plus"})
-	                            );
-	                        break;
-
-	                    case 'collapsable':
-	                        boxClassname = '';
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "collapse", onClick: that.toggleCollapse}, 
-	                                React.createElement("i", {className: "fa fa-minus"})
-	                            );
-	                        break;
-
-	                    case 'removable':
-	                        boxClassname = '';
-	                        button = 
-	                            React.createElement("button", {className: "btn btn-box-tool", dataWidget: "remove", onClick: that.removeBox}, 
-	                                React.createElement("i", {className: "fa fa-times"})
-	                            );
-	                        break; 
+	                if(this.props.link) {
+	                    link =
+	                        React.createElement("a", {href: this.props.link, className: "small-box-footer"}, 
+	                            "More info ", React.createElement("i", {className: "fa fa-arrow-circle-right"})
+	                        );
 	                }
 
-	                if(this.props.loading === true){
-	                    loadingState = 
-	                        React.createElement("div", {className: "overlay"}, 
-	                            React.createElement("i", {className: "fa fa-refresh fa-spin"})
+	                if(this.props.stats.indexOf('%') !== -1) {
+	                    var style = {
+	                        fontSize: '20px'
+	                    };
+
+	                    stats =
+	                        React.createElement("h3", null, 
+	                            this.props.stats.replace(/%/g, ''), 
+	                            React.createElement("sup", {style: style}, "%")
 	                        )
 	                }
 
-	                if(this.props.border === true){
-	                    borderClass = 'box-solid';
-	                }
-
 	                return(
-	                    React.createElement("div", {className: "col-md-3"}, 
-	                        React.createElement("div", {className: "box"+" " + this.props.theme+" " + boxClassname + " "+borderClass}, 
-	                            React.createElement("div", {className: "box-header with-border"}, 
-	                                React.createElement("h3", {className: "box-title"}, this.props.title), 
-	                                React.createElement("div", {className: "box-tools pull-right"}, 
-	                                    button
-	                                )
-	                                /* /.box-tools */
+	                    React.createElement("div", {className: "col-lg-3 col-xs-6"}, 
+	                        React.createElement("div", {className: "small-box "+this.props.theme}, 
+	                            React.createElement("div", {className: "inner"}, 
+	                                stats, 
+	                                React.createElement("p", null, this.props.subject)
 	                            ), 
-	                            /* /.box-header */
-	                            React.createElement("div", {className: "box-body"}, 
-	                                this.props.content
+	                            React.createElement("div", {className: "icon"}, 
+	                                React.createElement("i", {className: "fa "+this.props.icon})
 	                            ), 
-	                            /* /.box-body */
-	                            loadingState
+	                            link
 	                        )
 	                    )
 	                )
 	            }
-	        })
+	        });
 
-	        return SmallBox;
+	        return StatTile;
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
@@ -1201,11 +1302,21 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22),
 	        __webpack_require__(2),
 	        __webpack_require__(13)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
 	        var ChatBox = React.createClass({displayName: "ChatBox",
+	            getDefaultProps: function() {
+	                return {
+	                    headerTheme: 'box-primary',
+	                    notificationTheme: 'bg-light-blue',
+	                    chatTheme: 'direct-chat-primary',
+	                    buttonTheme: 'btn-primary',
+	                    title: 'Chat Box',
+	                    notifications: 0   
+	                }
+	            },
 	            toggleCollapse: function(event) {
 	                var box = ReactDOM.findDOMNode(this).children[0],
 	                    boxBody = ReactDOM.findDOMNode(this).children[0].children[1],
@@ -1223,12 +1334,15 @@ webpackJsonp([2],[
 	                if(box.className.indexOf('direct-chat-contacts-open') === -1){
 	                    box.className += ' direct-chat-contacts-open';
 	                }else{
-	                    box.className = box.className.replace(/direct-chat-contacts-open/g,'');
+	                    box.className = box.className.replace(/ direct-chat-contacts-open/g,'');
 	                }
 	            },
 	            render: function() {
-	                var borderClass, that = this;
-
+	                var borderClass = '', that = this;
+	                var a = React.Children.map(this.props.children, function(child){
+	                    return child
+	                });
+	                console.log(a);
 	                if(this.props.border === true){
 	                    borderClass = 'box-solid';
 	                }
@@ -1287,55 +1401,31 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var Conversations = React.createClass({displayName: "Conversations",
 	            render: function() {
 
 	                var conversations = this.props.conversations.map(function(messageDetails, iterator){
-	                    if(messageDetails.self === true){
-	                        return (
-	                            React.createElement("div", {className: "direct-chat-msg right", key: "message"+iterator}, 
-	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                    React.createElement("span", {className: "direct-chat-name pull-right"}, 
-	                                        messageDetails.name
-	                                    ), 
-	                                    React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
-	                                        messageDetails.date
-	                                    )
+	                    return (
+	                        React.createElement("div", {className: "direct-chat-msg " + messageDetails.align, key: "message"+iterator}, 
+	                            React.createElement("div", {className: "direct-chat-info clearfix"}, 
+	                                React.createElement("span", {className: "direct-chat-name pull-right"}, 
+	                                    messageDetails.name
 	                                ), 
-	                                /* /.direct-chat-info */
-	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                                /* /.direct-chat-img */
-	                                React.createElement("div", {className: "direct-chat-text"}, 
-	                                    messageDetails.message
+	                                React.createElement("span", {className: "direct-chat-timestamp pull-left"}, 
+	                                    messageDetails.date
 	                                )
-	                                /* /.direct-chat-text */
+	                            ), 
+	                            /* /.direct-chat-info */
+	                            React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
+	                            /* /.direct-chat-img */
+	                            React.createElement("div", {className: "direct-chat-text"}, 
+	                                messageDetails.message
 	                            )
+	                            /* /.direct-chat-text */
 	                        )
-	                    }else{
-	                        return (
-	                            React.createElement("div", {className: "direct-chat-msg", key: "message"+iterator}, 
-	                                React.createElement("div", {className: "direct-chat-info clearfix"}, 
-	                                    React.createElement("span", {className: "direct-chat-name pull-left"}, 
-	                                        messageDetails.name
-	                                    ), 
-	                                    React.createElement("span", {className: "direct-chat-timestamp pull-right"}, 
-	                                        messageDetails.date
-	                                    )
-	                                ), 
-	                                /* /.direct-chat-info */
-	                                React.createElement("img", {className: "direct-chat-img", src: messageDetails.displayPicture, alt: "message user image"}), 
-	                                /* /.direct-chat-img */
-	                                React.createElement("div", {className: "direct-chat-text"}, 
-	                                    messageDetails.message
-	                                )
-	                                /* /.direct-chat-text */
-	                            )
-	                        )
-	                    }
+	                    )
 	                });
 
 	                return (      
@@ -1356,10 +1446,8 @@ webpackJsonp([2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
-	        __webpack_require__(2),
-	        __webpack_require__(13)
-	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM, commonFunctions) {
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var Contacts = React.createClass({displayName: "Contacts",
 	            render: function() {
 
@@ -1401,14 +1489,139 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20),
+	        __webpack_require__(22)
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
+	        var ProfileCard = React.createClass({displayName: "ProfileCard",
+	            getDefaultProps: function() {
+	                return {
+	                    pictureAlignment: 'center',
+	                    theme: 'bg-yellow',
+	                    displayName: 'John Doe',
+	                    description: 'My profile description',
+	                    displayPicture: '../dist/img/user7-128x128.jpg'   
+	                }
+	            },
+	            render: function() {
+	                var coverPicture = {}, alignmentType = 'widget-user', footerPadding = '';
+	                
+	                if(this.props.pictureAlignment === 'left'){
+	                    alignmentType = 'widget-user-2';
+	                    footerPadding = 'no-padding';
+	                }
+
+	                if(this.props.coverPicture){
+	                    coverPicture = {
+	                        background: 'url('+this.props.coverPicture+') center'
+	                    };
+	                }
+
+	                return (
+	                    React.createElement("div", {className: "col-md-4"}, 
+	                        /* Widget: user widget style 1 */
+	                        React.createElement("div", {className: "box box-widget "+alignmentType}, 
+	                            /* Add the bg color to the header using any of the bg-* classes */
+	                            React.createElement("div", {className: "widget-user-header "+this.props.theme, style: coverPicture}, 
+	                                React.createElement("div", {className: "widget-user-image"}, 
+	                                    React.createElement("img", {className: "img-circle", src: this.props.displayPicture, alt: "User Avatar"})
+	                                ), 
+	                                /* /.widget-user-image */
+	                                React.createElement("h3", {className: "widget-user-username"}, this.props.displayName), 
+	                                React.createElement("h5", {className: "widget-user-desc"}, this.props.description)
+	                            ), 
+	                            React.createElement("div", {className: "box-footer "+footerPadding}, 
+	                                this.props.children
+	                            )
+	                        )
+	                        /* /.widget-user */
+	                    )
+	                )
+	                
+	            }
+	        });
+
+	        return ProfileCard;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(22),
+	        __webpack_require__(2),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	        var ProfileInfoList = React.createClass({displayName: "ProfileInfoList",
+	            render: function() {
+	                var listItems = this.props.list.map(function(info, iterator){
+	                    return (
+	                        React.createElement("li", {key: iterator}, 
+	                            React.createElement("a", {href: info.link}, 
+	                                info.description, 
+	                                React.createElement("span", {className: "pull-right badge "+info.badgeTheme}, 
+	                                    info.stats
+	                                )
+	                            )
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("ul", {className: "nav nav-stacked"}, 
+	                        listItems
+	                    )
+	                )   
+	            }
+	        });
+
+	        return ProfileInfoList;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(22),
+	        __webpack_require__(2),
+	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React, ReactDOM) {
+	        var ProfileInfoList = React.createClass({displayName: "ProfileInfoList",
+	            render: function() {
+	                var descriptionBlocks = this.props.list.map(function(info, iterator){
+	                    return (
+	                        React.createElement("div", {className: "col-sm-4 border-right", key: iterator}, 
+	                            React.createElement("div", {className: "description-block"}, 
+	                                React.createElement("h5", {className: "description-header"}, info.stats), 
+	                                React.createElement("span", {className: "description-text"}, info.description)
+	                            )
+	                            /* /.description-block */
+	                        )
+	                    )
+	                });
+
+	                return (
+	                    React.createElement("div", {className: "row"}, 
+	                        descriptionBlocks
+	                    )
+	                )   
+	            }
+	        });
+
+	        return ProfileInfoList;
+	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
+
+/***/ },
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	        __webpack_require__(22),
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderMessages = React.createClass({displayName: "HeaderMessages",
 
@@ -1458,11 +1671,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 41 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
+	        __webpack_require__(22)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderNotifications = React.createClass({displayName: "HeaderNotifications",
 
@@ -1504,11 +1717,11 @@ webpackJsonp([2],[
 	    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
 
 /***/ },
-/* 42 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	        __webpack_require__(20)
+	        __webpack_require__(22)
 	    ], __WEBPACK_AMD_DEFINE_RESULT__ = function (React) {
 	        var HeaderTasks = React.createClass({displayName: "HeaderTasks",
 
